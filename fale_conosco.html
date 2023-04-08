@@ -1,0 +1,86 @@
+<html>
+
+<!-- formulário do site -->
+
+<head>
+	<title> P1 - PWI </title>
+	<link rel="stylesheet" type="text/css" href="estilo.css" />
+
+		<script language="JavaScript">
+		function enviar_faleconosco() { //funcao do evento de click para enviar
+			var nome_faleconosco = document.frm_faleconosco.txt_nome_faleconosco.value;
+			var email_faleconosco = document.frm_faleconosco.txt_email_faleconosco.value;
+			var telefone_faleconosco = document.frm_faleconosco.txt_telefone_faleconosco.value;
+			var explique_faleconosco = document.frm_faleconosco.txt_explique_faleconosco.value;
+			if(nome_faleconosco != "" && email_faleconosco != "" && telefone_faleconosco != "" && explique_faleconosco != "") {
+				alert("Mensagem enviada com sucesso! Você será redirecionado para a página principal");
+				window.location = "cadastro.html";
+				
+			} else {
+				alert("Preencha todos os campos!");
+				limpar_faleconosco();
+			}
+		}
+		function limpar_faleconosco() {
+			document.frm_faleconosco.txt_nome_faleconosco.value = "";
+			document.frm_faleconosco.txt_email_faleconosco.value = "";
+			document.frm_faleconosco.txt_telefone_faleconosco.value = "";
+			document.frm_faleconosco.txt_explique_faleconosco.value = "";
+			document.frm_faleconosco.txt_nome_faleconosco.focus();
+		}
+		</script>
+</head>
+	
+<body bgcolor="#bfd6c7" text = "black">
+<center>
+<b><h2> Fale conosco</h2>
+</center>
+<form name="frm_faleconosco">
+<fieldset>
+
+	<legend> Duvidas </legend>
+	
+ Nome:<br>
+ <input id="caixa" type="text" name="txt_nome_faleconosco" size ="60" maxlength="60" required><p>
+ Email:<br>
+ <input id="caixa" type="text" name="txt_email_faleconosco" size="80" maxlength="80"><p>
+ Telefone:<br>
+ <input id="caixa" type="text" name="txt_telefone_faleconosco" size="20" maxlength="20"><br>
+ <br>
+ 
+
+Selecione o assunto:<br>
+<select name = "assunto" id="caixa">
+<option value = "cursos"> Cursos </option>
+<option value = "mensalidades e valores"> Mensalidades e Valores </option>
+<option value = "localidade"> Localidade </option>
+<option value = "horarios"> Horários </option>
+<option value = "outros"> Outros </option>
+</select>
+<br>
+<br>
+Explique: <br>
+<textarea  cols="50" rows="10" name="txt_explique_faleconosco" id="caixa"> Digite aqui</textarea><p>
+	<input id="botao" type ="button" name="btn_enviar_faleconosco" value="Enviar" onClick="enviar_faleconosco()">&nbsp;&nbsp;
+	<input id="botao" type ="button" name="btn_limpar_faleconosco" value="Limpar" onClick="limpar_faleconosco()">&nbsp;&nbsp;
+</fieldset>
+&nbsp;&nbsp;&nbsp;
+
+<fieldset>
+
+<legend> Informações de Contato </legend>
+
+<ul>
+	<li><h4>Telefone: (11)99999-9999 </h4></li>
+	<li><h4>Email: escoladeidiomas@gmail.com </h4></li>
+	<li><h4>Endereço: Rua das Margaridas, Bairro das Flores - São Paulo - SP (00000-000)</h4></li>
+	
+</ul>
+
+
+</fieldset>
+
+</center>
+</form>
+</body>
+</html>

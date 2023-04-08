@@ -1,0 +1,27 @@
+h1 {
+    color: #574b45;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 32px;
+}
+
+#caixa:focus {
+    background-color: #f7efd8;
+}
+
+#botao {
+    height: 35px;
+    width: 120px;
+    background-color: #574b45 ;
+    color: white;
+	font-weight: bold;
+    border-radius: 40px;
+}
+
+#botao:hover {
+    background-color: #574b45;
+    color: #8ac7de;
+	font-weight: bold;
+    box-shadow: 0 0 20px;
+}
